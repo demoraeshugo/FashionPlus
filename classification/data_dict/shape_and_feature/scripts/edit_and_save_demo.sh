@@ -71,7 +71,7 @@ case ${MODEL} in
   ;;
 esac
 
-exec_options="python update_demo.py \
+exec_options="python3 update_demo.py \
                      --update_fname ${UPDATE_FNAME} \
                      --update_type ${UPDATE_TYPE} \
                      --max_iter_hr ${MAXITER} \

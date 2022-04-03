@@ -8,7 +8,7 @@
 #
 
 set -ex
-ROOT_DIR='/FashionPlus/' # absolute path for FashionPlus
+ROOT_DIR='/common/home/hnm21/Desktop/dev/CV-Final-Project/FashionPlus/' # absolute path for FashionPlus
 CLASS='humanparsing'  # segmentation definition from dataset "humanparsing"
 MODEL='pix2pixHD'
 COLOR_MODE='Lab' # RGB, Lab
@@ -96,7 +96,7 @@ fi
 
 LABEL_DIR=${ROOT_DIR}/datasets/images/
 IMG_DIR=${ROOT_DIR}/datasets/labels/
-python process_face.py \
+python3 process_face.py \
         --fname ${ITER_HEADER}_${UPDATE_FNAME} \
         --orig_img_dir ${LABEL_DIR} \
 	--orig_mask_dir ${IMG_DIR} \
@@ -104,7 +104,7 @@ python process_face.py \
 	--gen_mask_dir ${SAVE_MASKS_DIR} \
 	--bbox_pickle_file ${ROOT_DIR}/generation/datasets/demo/test.p \
 	--result_dir ${SAVE_CODES_DIR}/images/
-python process_face.py \
+python3 process_face.py \
         --fname 001_${UPDATE_FNAME} \
         --orig_img_dir ${LABEL_DIR} \
 	--orig_mask_dir ${IMG_DIR} \
